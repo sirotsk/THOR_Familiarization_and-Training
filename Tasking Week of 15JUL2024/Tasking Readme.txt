@@ -17,7 +17,7 @@ Read through the notebook, and familiarize yourself with the code and how it wor
 	match either your dream car, or your current vehicle. 
 	- In order to get the proper terms to load into the SearchTerms, you will have to go to the ksl.com website, conduct a search through the website matching the criteria for the vehicle. 
 		After conducting the search, follow the directions on this confluence page 
-		https://asgard-analytics.atlassian.net/wiki/spaces/~63cc1c60e28ec74364cd3ecd/pages/80773232/KSL+Tasking to inspect the page and find the API call. 
+		https://asgard-analytics.atlassian.net/wiki/spaces/THOR/pages/82575362/Vehicle+Site+Scraping+Scripts to inspect the page and find the API call. 
 		You will take the terms from the payload and put those into the SearchTerms. 
 	- Then you will run this code to conduct a search for your vehicle. 
 	
