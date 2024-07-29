@@ -10,21 +10,42 @@
 | '--------------' || '--------------' || '--------------' |        | '--------------' || '--------------' || '--------------' || '--------------' |
  '----------------'  '----------------'  '----------------'            '----------------'  '----------------'  '----------------'  '----------------' 
 
-* For this task, you will familiarize yourself with this example of THOR web scraping code. The notebook in this folder is the webscraping code for craigslist.com. 
-Read through the notebook, and familiarize yourself with the code and how it works. 
+* For this task, you will build off of what you have learned from the previous weeks, and build a more intricate app that will take in user input and conduct searches 
+using the provided input on all 3 websites we have gone over.
 
-Below is the link to the confluence page for documentation / walkthrough. (NOTE: There is not much detail for the walkthrough for this weeks tasking. The tasking 
-this week is meant to build off your experience from the previous weeks)
+Below is the link to the confluence page for documentation / walkthrough.
 https://asgard-analytics.atlassian.net/wiki/spaces/THOR/pages/90210465/Craigslist+Scraping
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-* After going through the notebook, your next task will be to run a search on the site, by changing the SearchTerms, OR the PAYLOAD sent to the code. 
-	- You will do this by creating an "app" that will take user input, and run the code in the notebook using that user input to conduct the web scrape / search. 
-	- Example are provided in the tasking ipynb file after the 'NOTES' section for different options and exmaples you can use.
+More details are included in the tasking notebook to help you get started, but a general outline and some quick 'how-tos' are below.
+	1. Understand that you can import python scripts into other python scripts / notebooks just like you do python libraries (i.e. pandas), and run functions from those 
+	scripts in the same way.
+	///////////////////////////////////////////////////////////
+		import my_module
+
+		# Using the functions from the imported module
+		greeting = my_module.greet("Alice")
+		print(greeting)  # Output: Hello, Alice!
+
+		result = my_module.add(5, 3)
+		print(result)  # Output: 8
+	///////////////////////////////////////////////////////////
+
+	2. Create some functions that will send seacrh tersm / payload to each of the websites to run a search. 
+
+	3. Create a function that will take in some search terms and send a custom payload to each of the sites using the input search terms.
+		here, you will have to make some coade that will formatt the input terms differently for each of the websites payload to properly conduct the search.
+
+	4. Ensure that the data being pulled from each site search is formatted the same.
+		Here, you can use the formatting functions found in each notebook/py file to make sure the data pulled from each site is formatted into the standardised format. 
+		After each sites df is properly formatted, you will then join all 3 dfs (the dfs from each website) into one master df.
+		Once you have your master df of all of the search results, you will export this df into a csv. 
+		(o) if you can, write some code that will remove duplicates from the master df, you can do this by removing dupes from each individual one, or from the master df.
+
+	5. Bring it all together.
+		Using your scripts you created above, you will now make an app (just like last week) that will take in some user input, formats the input for each payload, sends a 
+		unique payload (using the formatted user input) to each sites scarping function, and then formats and joins the resulting result dfs into one master df, and exports them into a csv.
 	
-* Once you have gotten the search to work, your next task will be to explore the craigslist website, and find any other APIs you find interesting or helpful. This is pretty much a 
-sandbox task from here out. Just explore the website, find any API calls you can, and mess around with them in the notebook. If you want to make these API calls through python, 
-you can right-click on the API call in your inspect element and 'copy as fetch', then you can paste this into ChatGPT and tell it to convert it into a python request.
 
  .----------------.  .----------------.  .----------------.        .----------------.  .----------------.  .----------------.  .----------------. 
 | .--------------. || .--------------. || .--------------. |      | .--------------. || .--------------. || .--------------. || .--------------. |
@@ -38,12 +59,11 @@ you can right-click on the API call in your inspect element and 'copy as fetch',
 | '--------------' || '--------------' || '--------------' |      | '--------------' || '--------------' || '--------------' || '--------------' |
  '----------------'  '----------------'  '----------------'        '----------------'  '----------------'  '----------------'  '----------------' 
 
-1). WORKING code that conducts a search from your app.
-2). Any API calls you find and make, the code to run them in the notebook. Document any findings you make on the confluence page. For now, create your own confluenece page and kep
-	all of your documentation / progress there.
+1). WORKING code that conducts a search from your app to all 3 websites.
+2). Your first priority should be making functions that can send a search terms to another function that formats those terms into unique payloads for 
+	each site, and then runs searches on all 3 sites. 
 
 ========================================================================================================================================================================================================
-NOTES:	This tasking is very similiar to lasts weeks, except this week we are going over a different website, and the due out task should really test your python knowledge. 
-
+NOTES:	
 
 ===========================================================================================================================================================================================================
